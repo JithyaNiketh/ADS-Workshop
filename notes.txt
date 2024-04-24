@@ -1,0 +1,165 @@
+IDE: Integrated Developent Environment.(VS code, atom, eclipse etc.)
+
+ADT: abstract data types.
+
+Interface: contains incomplete methods.
+
+Primitive data types: Memory blocks used to store data.
+
+Wrapper classes: Used to Primitive data types into objects.
+
+Object class: This is supermost class in java.
+    every class that we define will extend this class by default.
+
+Pascal casing:  The first character in a word should be in upper case.
+
+Camel casing: The first word should completely be lower case and the other words are Pascal casing.
+
+Lang package is defaultly imported into every java class.
+System class and String class are a part of Lang package.
+
+Wrapper classes are three types:
+    Number.  Boolean.  Character. 
+    In Number, there are multiple 
+
+Object creatyion:
+    ClassName ObjectName = new ClassName();
+    Class_Data_type Object_Reference_variable = new_operator Default_Constructor();
+
+Boxing: 
+    it is of 2 types:
+        Implicit: without the interference of user(auto boxing), 
+        Explicit: with the help of user with new keyword.
+
+Wrapper classes are used to convert Primitive data types into objects.
+Wrapper classes nclude methods to unwrap the object back to Primitive data type.
+java.util package only handles objects so wrapper classes are helpful.
+
+In collection framework, Data structures store only objects and not Primitive data types.
+
+Wrapper classes are also used for synchronization in multithreading. 
+As objects are needed to achieve the synchronization process where we ensure    
+    that the shared resource will be used by only one thrad at a time.
+
+process:
+    Wrapper class -> Creating the object -> contains the field -> stores the Primitive data type.
+
+AutoBoxing:
+    > AutoBoxing is when the java compiler performs the conversion of Primitive data type to object 
+    of their corresponding wrapper class.
+    > the corresponding wrapper class are like Integer, Double, Float, etc. these are default.
+    > AutoBoxing is done when the Primitive value is passed as a parameter to a method that 
+    expects an objectfrom the corresponding wrapper class
+
+UnBoxing:
+    > It is the opposite process of AutoBoxing.
+    > UnBoxing is automatically converting an objectof a wrapper type to its corresponding 
+      Primitive type.
+      For example: Integer to int.
+    > UnBoxing is done when the object of wrapper class is passed as a parameter to a method that 
+    expects a value of the corresponding Primitive type
+
+List ADT methods:
+    size()
+    isEmpty()
+    get(i)
+    set(i,e)
+    Add(i,e)
+    remove(i,e)
+
+Iterators: Iterators are used to iterate through a list or an array and access the elements.
+    Iterators only move forward.
+    Before Iterators, Enumeration is used for vectors.
+
+Enumeration, Iterator and ListIterator are called Cursors in java.
+
+Enumeration is only used for vectors. Iterators can be used for lists, arrays and vectors.
+ListIterators are the latest java Cursor.
+
+
+algebrac expression: Infix.
+    operator priority: BODMAS
+
+conversion infix to prefix or postfix:
+    operator-> move to stack
+    operand -> move to output
+    postfix: operator is after operands
+    prefix: operator is before the operands
+
+Heap: CBT(complete binary tree)
+    Min heap, Max heap
+    in min heap, root node is the smallest. in max heap, root node is greater than every other node.
+    leaf node is node without child nodes.
+
+heapify:
+    converting binary trees into min heap or max heap.
+
+red black tree:
+    If tree is empty create new node as root node as black
+    if tree is not empty create new node as leaf node as red 
+    if parent of new node is black, then exit.
+    if parent of new node is red, then check the color of parents sibling of new node.
+        a. if color is black and null node is present, then do 
+        b. if color is red, then recolor and also check if parent's parent of new node is not root node
+        then recolor and recheck
+
+    Example: 11, 18, 6, 15, 16, 29, 25, 42
+
+
+
+Graphs: nodes and edges.
+    nodes are also called vertices. edges are the lines that connect 2 vertices.
+    types:
+        weighted:
+            edges have values. could be positive or negative depending on the direction.
+        unweighted:
+            edges do not have values
+        directed:
+            traversed in a specific path.
+        non directed:
+            no specified path.
+        cyclic: 
+            should contain atleast one loop.
+        acyclic:
+            no loop.
+        complete: 
+            all of the vertices should be in a loop.
+        
+    Operation: 
+        AddVertex()
+        AddEdge()
+        RemoveVertex(v)
+        RemoveEdge(edge id)
+        GetNeighbours(v1, v2)
+        GetVertices(edge id)
+        
+Adgecency matrix: 
+    method to represent Graphs.
+    always a square matrix with rows and coloums equal to Number of nodes in graph.
+    only contains Boolean values. 
+    if there is an edge between 2 nodes, it is represented as 1
+    if there is no edge between 2 nodes, represented as 0.
+
+Adgecency List: 
+    method to represent graphs.
+    uses a linked list.
+    it stores the Adgecent nodes of an element in the array in a seperate linked list.
+    for an undirected graph, one linked list is enough.
+    but for a directed graph, two linked lists are required, one for incoming and one for outgoing.
+
+Queues:
+    FIFO
+    enqueue(), add(), offer() are used to add element.
+
+DAG: direct acyclic graph.
+
+TDG: Topological direct graph.
+    removes the element with 0 incoming elements and prints it.
+    this step continues until every node is traversed.
+    if more than one node have zero incoming, any one of them is deleted first and then the other one.
+
+Single Source Shortest Path:
+    returns the Shortest path from source node to specified node.
+
+All pair Shortest path: 
+    
